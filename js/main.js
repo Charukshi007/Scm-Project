@@ -106,11 +106,11 @@
     });
     
 })(jQuery);
-
 document.addEventListener("DOMContentLoaded", () => {
     const roomBookingForm = document.getElementById('room-booking-form');
+    
     if (roomBookingForm) {
-        roomBookingForm.addEventListener('submit', async (e) => {
+        roomBookingForm.addEventListener('submit', (e) => {
             e.preventDefault(); // Prevent default form submission
 
             const data = {
@@ -126,55 +126,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Validation for empty fields
             if (!data.name || !data.email || !data.checkIn || !data.checkOut || !data.adults || !data.children || !data.room) {
-                alert("Please fill out all required fields.");
+                alert("❌ Please fill out all required fields.");
                 return;
             }
 
-            try {
-                const response = await fetch('/book-room', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
-                });
+            // Store booking in localStorage
+            localStorage.setItem('bookingData', JSON.stringify(data));
 
-                const result = await response.json();
+            // Show success message
+            alert("✅ Booking submitted successfully!");
 
-                if (response.ok) {
-                    alert(result.message); // ✅ Booking received successfully!
-                    roomBookingForm.reset(); // Optional: clear form after submission
-                } else {
-                    alert(`Error: ${result.message}`);
-                }
-            } catch (error) {
-                console.error('Booking submission failed:', error);
-                alert('❌ Failed to submit booking. Please try again.');
-            }
+            // Optional: reset the form
+            roomBookingForm.reset();
+
+            // Redirect to confirmation page
+            window.location.href = 'booking-success.html';
         });
     }
 });
-
-
-//service page newsletter email submission
-document.addEventListener('DOMContentLoaded', function () {
-    const submitBtn = document.getElementById('newsletterSubmit');
-    const emailInput = document.getElementById('newsletterEmail');
-    const message = document.getElementById('newsletterMsg');
-  
-    submitBtn.addEventListener('click', function () {
-      const email = emailInput.value.trim();
-  
-      if (email && email.includes('@')) {
-        localStorage.setItem('newsletterEmail', email);
-        message.textContent = 'Thank you for subscribing!';
-        message.style.color = 'green';
-        emailInput.value = ''; // Clear input
-      } else {
-        message.textContent = 'Please enter a valid email address.';
-        message.style.color = 'red';
-      }
-    });
-  });
-//  service page newsletter js ends here
-
-
-  
