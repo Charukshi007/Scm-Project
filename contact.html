@@ -281,6 +281,96 @@
         </div>
         <!-- Footer End -->
 
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+        // Select the contact form (the first form in the contact section)
+        const contactForm = document.querySelector('.container-xxl form');
+        if (!contactForm) return;
+    
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+    
+            // Get form field values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+    
+            // Basic validation
+            let errors = [];
+    
+            if (name.length < 2) {
+                errors.push('Please enter your name.');
+            }
+    
+            if (!validateEmail(email)) {
+                errors.push('Please enter a valid email address.');
+            }
+    
+            if (subject.length < 3) {
+                errors.push('Please enter a Contact Number.');
+            }
+    
+            if (message.length < 10) {
+                errors.push('Please enter a message (at least 10 characters).');
+            }
+    
+            // Remove previous error messages
+            let existingAlert = contactForm.querySelector('.alert');
+            if (existingAlert) existingAlert.remove();
+    
+            if (errors.length > 0) {
+                // Show error messages
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'alert alert-danger mt-3';
+                errorDiv.innerHTML = errors.join('<br>');
+                contactForm.appendChild(errorDiv);
+                return;
+            }
+    
+            // If validation passes, show a success message (simulate submission)
+            const successDiv = document.createElement('div');
+            successDiv.className = 'alert alert-success mt-3';
+            successDiv.innerText = 'Thank you for coperating! Our team will contact you shortly.';
+            contactForm.appendChild(successDiv);
+    
+            // Optionally, here you can send the form data using fetch() or AJAX
+    
+            // Reset form fields
+            contactForm.reset();
+        });
+    
+        // Email validation helper
+        function validateEmail(email) {
+            // Simple regex for demonstration
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+    });
+    //service page newsletter email submission
+    document.addEventListener('DOMContentLoaded', function () {
+        const submitBtn = document.getElementById('newsletterSubmit');
+        const emailInput = document.getElementById('newsletterEmail');
+        const message = document.getElementById('newsletterMsg');
+      
+        submitBtn.addEventListener('click', function () {
+          const email = emailInput.value.trim();
+      
+          if (email && email.includes('@')) {
+            localStorage.setItem('newsletterEmail', email);
+            message.textContent = 'Thank you for subscribing!';
+            message.style.color = 'green';
+            emailInput.value = ''; // Clear input
+          } else {
+            message.textContent = 'Please enter a valid email address.';
+            message.style.color = 'red';
+          }
+        });
+      });
+    //  service page newsletter js ends here
+        </script>
+    
+    
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
