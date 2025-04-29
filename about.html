@@ -348,6 +348,31 @@
         </div>
         <!-- Footer End -->
 
+        
+    <script>
+        // JavaScript to handle form validation and action
+        document.addEventListener('DOMContentLoaded', () => {
+            const emailInput = document.getElementById('newsletter-email');
+            const submitButton = document.getElementById('newsletter-submit');
+    
+            submitButton.addEventListener('click', () => {
+                const email = emailInput.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+                if (emailRegex.test(email)) {
+                    alert("Thank you for subscribing!");
+                    emailInput.value = '';
+                } else {
+                    alert("Please enter a valid email address.");
+                }
+            });
+        });
+    </script>
+        
+        
+        
+
+
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
