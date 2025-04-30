@@ -212,7 +212,7 @@
         </div>
     </div>
 </div>
-<!-- Newsletter End -->
+<!-- Newsletter End -->
         
 
         <!-- Footer Start -->
@@ -347,27 +347,23 @@
             return re.test(email);
         }
     });
-    //service page newsletter email submission
-    document.addEventListener('DOMContentLoaded', function () {
-        const submitBtn = document.getElementById('newsletterSubmit');
-        const emailInput = document.getElementById('newsletterEmail');
-        const message = document.getElementById('newsletterMsg');
-      
-        submitBtn.addEventListener('click', function () {
-          const email = emailInput.value.trim();
-      
-          if (email && email.includes('@')) {
-            localStorage.setItem('newsletterEmail', email);
-            message.textContent = 'Thank you for subscribing!';
-            message.style.color = 'green';
-            emailInput.value = ''; // Clear input
-          } else {
-            message.textContent = 'Please enter a valid email address.';
-            message.style.color = 'red';
-          }
+            // JavaScript to handle form validation and action
+            document.addEventListener('DOMContentLoaded', () => {
+            const emailInput = document.getElementById('newsletter-email');
+            const submitButton = document.getElementById('newsletter-submit');
+    
+            submitButton.addEventListener('click', () => {
+                const email = emailInput.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+                if (emailRegex.test(email)) {
+                    alert("Thank you for subscribing!");
+                    emailInput.value = '';
+                } else {
+                    alert("Please enter a valid email address.");
+                }
+            });
         });
-      });
-    //  service page newsletter js ends here
         </script>
     
     
