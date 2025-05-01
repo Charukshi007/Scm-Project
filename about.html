@@ -103,71 +103,28 @@
         </div>
         <!-- Header End -->
 
-
         <!-- Page Header Start -->
-        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
-            <div class="container-fluid page-header-inner py-5">
-                <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">About</li>
-                        </ol>
-                    </nav>
-                </div>
+<div class="container-fluid page-header mb-5 p-0" style="position: relative;">
+    <div style="background-image: url('img/carousel-1.jpg'); background-size: cover; background-position: center; height: 400px;">
+        <!-- Black transparent overlay -->
+        <div style="background-color: rgba(0, 0, 0, 0.6); height: 100%; display: flex; align-items: center; justify-content: center;">
+            <div class="text-center">
+                <h1 class="display-3 text-white mb-3">About</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center text-uppercase mb-0">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-warning">Home</a></li>
+                        <li class="breadcrumb-item"><a href="booking.html" class="text-warning">Pages</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">About</li>
+                    </ol>
+                </nav>
             </div>
         </div>
-        <!-- Page Header End -->
+    </div>
+</div>
+<!-- Page Header End -->
 
 
-        <!-- Booking Start -->
-        <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="bg-white shadow" style="padding: 35px;">
-                    <div class="row g-2">
-                        <div class="col-md-10">
-                            <div class="row g-2">
-                                <div class="col-md-3">
-                                    <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input"
-                                            placeholder="Check in" data-target="#date1" data-toggle="datetimepicker" />
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" placeholder="Check out" data-target="#date2" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option selected>Adult</option>
-                                        <option value="1">Adult 1</option>
-                                        <option value="2">Adult 2</option>
-                                        <option value="3">Adult 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option selected>Child</option>
-                                        <option value="1">Child 1</option>
-                                        <option value="2">Child 2</option>
-                                        <option value="3">Child 3</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <button class="btn btn-primary w-100">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Booking End -->
-
-
+        
         <!-- About Start -->
         <div class="container-xxl py-5">
             <div class="container">
@@ -227,7 +184,6 @@
             </div>
         </div>
         <!-- About End -->
-
 
         <!-- Team Start -->
         <div class="container-xxl py-5">
@@ -307,24 +263,23 @@
         <!-- Team End -->
         
         
-
-        <!-- Newsletter Start -->
-        <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 border rounded p-1">
-                    <div class="border rounded text-center p-1">
-                        <div class="bg-white rounded text-center p-5">
-                            <h4 class="mb-4">Subscribe Our <span class="text-primary text-uppercase">Newsletter</span></h4>
-                            <div class="position-relative mx-auto" style="max-width: 400px;">
-                                <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
-                            </div>
-                        </div>
+<!-- Newsletter Start -->
+<div class="container newsletter mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 border rounded p-1">
+            <div class="border rounded text-center p-1">
+                <div class="bg-white rounded text-center p-5">
+                    <h4 class="mb-4">Subscribe Our <span class="text-primary text-uppercase">Newsletter</span></h4>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input id="newsletter-email" class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
+                        <button id="newsletter-submit" type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Newsletter Start -->
+    </div>
+</div>
+<!-- Newsletter End -->
         
 
         <!-- Footer Start -->
@@ -335,8 +290,8 @@
                         <div class="bg-primary rounded p-4">
                             <a href="index.html"><h1 class="text-white text-uppercase mb-3">STAY WISE</h1></a>
                             <p class="text-white mb-0">
-								"An elegent and user-friendly online hotel booking website that allows users to explore rooms , view services,and book luxurious stays with ease." 
-							</p>
+                                "An elegent and user-friendly online hotel booking website that allows users to explore rooms , view services,and book luxurious stays with ease." 
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
@@ -355,11 +310,11 @@
                         <div class="row gy-5 g-4">
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
-                                <a class="btn btn-link" href="">About Us</a>
-                                <a class="btn btn-link" href="">Contact Us</a>
-                                <a class="btn btn-link" href="">Privacy Policy</a>
-                                <a class="btn btn-link" href="">Terms & Condition</a>
-                                <a class="btn btn-link" href="">Support</a>
+                                <a class="btn btn-link" href="about.html">About Us</a>
+                                <a class="btn btn-link" href="contact.html">Contact Us</a>
+                                <a class="btn btn-link" href="privacy.html">Privacy Policy</a>
+                                <a class="btn btn-link" href="terms&conditions.html">Terms & Condition</a>
+                                <a class="btn btn-link" href="support.html">Support</a>
                             </div>
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
@@ -393,10 +348,32 @@
         </div>
         <!-- Footer End -->
 
-
+        
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
+
+    <script>
+        // JavaScript to handle form validation and action
+        document.addEventListener('DOMContentLoaded', () => {
+            const emailInput = document.getElementById('newsletter-email');
+            const submitButton = document.getElementById('newsletter-submit');
+    
+            submitButton.addEventListener('click', () => {
+                const email = emailInput.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+                if (emailRegex.test(email)) {
+                    alert("Thank you for subscribing!");
+                    emailInput.value = '';
+                } else {
+                    alert("Please enter a valid email address.");
+                }
+            });
+        });
+    </script>
+        
+        
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -412,6 +389,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
 </body>
 
 </html>
