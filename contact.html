@@ -114,7 +114,7 @@
                     <ol class="breadcrumb justify-content-center text-uppercase mb-0">
                         <li class="breadcrumb-item"><a href="index.html" class="text-warning">Home</a></li>
                         <li class="breadcrumb-item"><a href="booking.html" class="text-warning">Pages</a></li>
-                        <li class="breadcrumb-item active text-white" aria-current="page">About</li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Contact</li>
                     </ol>
                 </nav>
             </div>
@@ -212,7 +212,7 @@
         </div>
     </div>
 </div>
-<!-- Newsletter End -->
+<!-- Newsletter End -->
         
 
         <!-- Footer Start -->
@@ -231,7 +231,7 @@
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info_staywise@example.com</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href="https://x.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -245,9 +245,9 @@
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
                                 <a class="btn btn-link" href="about.html">About Us</a>
                                 <a class="btn btn-link" href="contact.html">Contact Us</a>
-                                <a class="btn btn-link" href="policy.html">Privacy Policy</a>
-                                <a class="btn btn-link" href="Terms&condition.html">Terms & Condition</a>
-                                <a class="btn btn-link" href="suppport.html">Support</a>
+                                <a class="btn btn-link" href="privacy.html">Privacy Policy</a>
+                                <a class="btn btn-link" href="terms&conditions.html">Terms & Condition</a>
+                                <a class="btn btn-link" href="support.html">Support</a>
                             </div>
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
@@ -347,27 +347,23 @@
             return re.test(email);
         }
     });
-    //service page newsletter email submission
-    document.addEventListener('DOMContentLoaded', function () {
-        const submitBtn = document.getElementById('newsletterSubmit');
-        const emailInput = document.getElementById('newsletterEmail');
-        const message = document.getElementById('newsletterMsg');
-      
-        submitBtn.addEventListener('click', function () {
-          const email = emailInput.value.trim();
-      
-          if (email && email.includes('@')) {
-            localStorage.setItem('newsletterEmail', email);
-            message.textContent = 'Thank you for subscribing!';
-            message.style.color = 'green';
-            emailInput.value = ''; // Clear input
-          } else {
-            message.textContent = 'Please enter a valid email address.';
-            message.style.color = 'red';
-          }
+            // JavaScript to handle form validation and action
+            document.addEventListener('DOMContentLoaded', () => {
+            const emailInput = document.getElementById('newsletter-email');
+            const submitButton = document.getElementById('newsletter-submit');
+    
+            submitButton.addEventListener('click', () => {
+                const email = emailInput.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+                if (emailRegex.test(email)) {
+                    alert("Thank you for subscribing!");
+                    emailInput.value = '';
+                } else {
+                    alert("Please enter a valid email address.");
+                }
+            });
         });
-      });
-    //  service page newsletter js ends here
         </script>
     
     
