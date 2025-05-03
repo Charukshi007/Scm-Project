@@ -102,24 +102,28 @@
         </div>
         <!-- Header End -->
 
-        <!-- Page Header Start -->
-         <!--Page Header background image-->
-        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
-            <div class="container-fluid page-header-inner py-5">
-                <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Services</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item"><a href="booking.html">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Services</li>
-                        </ol>
-                    </nav>
-                </div>
+	    
+       <!-- Page Header Start -->
+<div class="container-fluid page-header mb-5 p-0" style="position: relative;">
+    <div style="background-image: url('img/carousel-1.jpg'); background-size: cover; background-position: center; height: 400px;">
+        <!-- Black transparent overlay -->
+        <div style="background-color: rgba(0, 0, 0, 0.6); height: 100%; display: flex; align-items: center; justify-content: center;">
+            <div class="text-center">
+                <h1 class="display-3 text-white mb-3">Contact</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center text-uppercase mb-0">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-warning">Home</a></li>
+                        <li class="breadcrumb-item"><a href="booking.html" class="text-warning">Pages</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">About</li>
+                    </ol>
+                </nav>
             </div>
         </div>
-        <!-- Page Header End -->
+    </div>
+</div>
+<!-- Page Header End -->
 
+	    
         <!-- Service Start -->
         <div class="container-xxl py-5">
             <div class="container">
@@ -199,6 +203,7 @@
         </div>
         <!-- Service End -->
 
+	    
         <!-- Testimonial Start -->
         <div class="container-xxl testimonial mt-5 py-5 bg-dark wow zoomIn" data-wow-delay="0.1s" style="margin-bottom: 90px;">
             <div class="container">
@@ -241,6 +246,7 @@
         </div>
         <!-- Testimonial End -->
 
+	    
  <!-- Newsletter Start -->
 <div class="container newsletter mt-5">
     <div class="row justify-content-center">
@@ -258,6 +264,7 @@
     </div>
 </div>
 <!-- Newsletter End -->
+
 	    
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
@@ -335,12 +342,13 @@
         </div>
         <!-- Footer End -->
 
+	    
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
-	//JS
- <script>
+
+	<script>
         // JavaScript to handle form validation and action
         document.addEventListener('DOMContentLoaded', () => {
             const emailInput = document.getElementById('newsletter-email');
