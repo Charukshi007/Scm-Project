@@ -11,14 +11,10 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #f8f9fa;
       color: #333;
-    }
-
-    .confirmation-container {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #f8f9fa;
     }
 
     .confirmation-card {
@@ -66,14 +62,49 @@
   </style>
 </head>
 <body>
-  <div class="confirmation-container">
-    <div class="confirmation-card">
-      <div class="icon">&#9989;</div>
-      <h1>Booking Confirmed!</h1>
-      <p>Thank you for your reservation, <strong>Diksha</strong>.</p>
-      <p>Your check-in is on <strong>04/22/2025 2:38 PM</strong>, and check-out is on <strong>05/09/2025 3:25 PM</strong>.</p>
-      <a href="index.html" class="btn-home">Back to Home</a>
-    </div>
+  <div class="confirmation-card">
+    <div class="icon">&#9989;</div>
+    <h1>Booking Confirmed!</h1>
+  
+    <p>Thank you for your reservation, <strong id="guest-name">Guest</strong>.</p>
+    <p>
+      Your check-in is on <strong id="checkin-date">[check-in]</strong>, 
+      and check-out is on <strong id="checkout-date">[check-out]</strong>.
+    </p>
+  
+    <a href="index.html" class="btn-home">Back to Home</a>
   </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const booking = JSON.parse(localStorage.getItem('bookingData'));
+      console.log("Booking Data:", booking); // Log the booking data for debugging
+
+      if (booking) {
+        document.getElementById('guest-name').textContent = booking.name;
+        
+        // Log check-in and check-out dates for debugging
+        console.log("Check-in Date:", booking.checkIn);
+        console.log("Check-out Date:", booking.checkOut);
+
+        document.getElementById('checkin-date').textContent = formatDate(booking.checkIn);
+        document.getElementById('checkout-date').textContent = formatDate(booking.checkOut);
+      } else {
+        document.getElementById('guest-name').textContent = "Guest";
+      }
+
+      function formatDate(dateTimeStr) {
+        const options = {
+          month: '2-digit', day: '2-digit', year: 'numeric',
+          hour: '2-digit', minute: '2-digit',
+          hour12: true
+        };
+        // Log the formatted date for debugging
+        const formattedDate = new Date(dateTimeStr).toLocaleString('en-US', options);
+        console.log("Formatted Date:", formattedDate);
+        return formattedDate;
+      }
+    });
+  </script>
 </body>
 </html>
