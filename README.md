@@ -27,8 +27,8 @@ A dynamic and user-friendly website for booking hotel rooms online. It allows us
 ## 👩‍💻 Our Team Members
 
 - **Asmita** – *Front Developer*
-- **Diksha** – *Frontend and backend Developer and Tester*
-- **Dishika** – *Front Developer and backend Developer*
+- **Diksha** – *Full Stack Developer and Tester*
+- **Dishika** – *Full Stack Developer*
 - **Manleen** – *Front Developer*
 - **Charukashi** – *Project Manager*
 
