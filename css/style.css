@@ -4,7 +4,6 @@
     --light: #F1F8FF;
     --dark: #0F172B;
 }
-
 .fw-medium {
     font-weight: 500 !important;
 }
@@ -20,7 +19,6 @@
     bottom: 45px;
     z-index: 99;
 }
-
 
 /*** Spinner ***/
 #spinner {
