@@ -1,33 +1,54 @@
-Online Hotel Booking Website:-
+# 🏨 Online Hotel Booking System
 
+A dynamic and user-friendly website for booking hotel rooms online. It allows users to check availability, fill out a reservation form, and receive booking confirmations. Designed for ease of use with a modern, responsive UI.
 
-"An elegant and user-friendly online hotel booking website that allows users to explore rooms, view services, and book luxurious stays with ease."
+---
 
-Key Features:-
+## ✨ Special Features
 
+- 🛏️ Room Booking with Confirmation
+- 📅 Booking Date and Time Selection
+- 🧾 Booking Success Page with Details
+- 📱 Mobile-Responsive Design
+- 📤 Backend Integration Using Node.js
+- ✅ Confirmation Dialog Before Booking
 
-Advanced Booking Options: Users can select check-in/check-out dates, number of adults and children, and instantly submit their stay request.
+---
 
+## 🛠 Technologies Used
 
-Flexible Stay Duration: Book rooms for any number of days with real-time availability and smooth date selection.
+- 🎨 HTML  
+- 🎨 CSS  
+- ⚙️ JavaScript (Vanilla)  
+- 🖥️ Node.js & Express (Backend)
 
+---
 
-Luxury & Budget-Friendly Rooms: Choose from a wide range of luxurious suites to affordable, cozy rooms that suit every traveler's budget.
+## 👩‍💻 Our Team Members
 
+- **Asmita** – *Frontend Developer*
+- **Diksha** – *Backend Developer and Tester*
+- **Dishika** – *UI/UX Designer*
+- **Manleen** – *Frontend Developer*
+- **Charukashi** – *Project Manager*
 
-Room Services: Enjoy premium room services including daily housekeeping, in-room dining, and more (based on room type).
+---
 
+## 🧪 How to Run This Project Locally
 
-Elegant Visual Showcase: Beautiful image gallery showcasing the ambience, poolside views, and resort amenities.
+```bash
+# Clone the repository
+https://github.com/Charukshi007/Scm-Project.git
 
+# Navigate to the backend folder
+cd scm_backend
 
-Quick Contact Access: Easily find contact info like email and phone in the header for any assistance or queries.
+# Install dependencies
+npm install
 
+# Start the server
+node server.js
 
-Guest Statistics: Informative counters displaying total rooms, staff, and satisfied clients – building trust with visitors.
+# Open index.html from main directory in your browser
+https://github.com/Charukshi007/Scm-Project.git
 
-Tech Stack:-
-Frontend: HTML, CSS, JavaScript / React 
-
-
-Backend: Node.js 
