@@ -30,7 +30,7 @@ A dynamic and user-friendly website for booking hotel rooms online. It allows us
 - **Diksha** – *Full Stack Developer and Tester*
 - **Dishika** – *Full Stack Developer*
 - **Manleen** – *Front Developer*
-- **Charukashi** – *Project Manager*
+- **Charukshi** – *Project Manager*
 
 ---
 
