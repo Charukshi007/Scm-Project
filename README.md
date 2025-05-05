@@ -33,7 +33,6 @@ A dynamic and user-friendly website for booking hotel rooms online. It allows us
 - **Charukshi** – *Project Manager*
 
 ---
-
 ## 🧪 How to Run This Project Locally
 
 ```bash
@@ -52,6 +51,7 @@ node server.js
 # Open index.html from main directory in your browser
 https://github.com/Charukshi007/Scm-Project.git
 
+## 🧪 How to Run This Project on Google chrome
 #Deploy link of our website..
 https://charukshi007.github.io/Scm-Project/
 
