@@ -52,3 +52,6 @@ node server.js
 # Open index.html from main directory in your browser
 https://github.com/Charukshi007/Scm-Project.git
 
+#Deploy link of our website..
+https://charukshi007.github.io/Scm-Project/
+
